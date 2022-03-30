@@ -8,25 +8,23 @@ Hopefully in the future ECMA implements it natively.
 
 ```Javascript
 
-// Create custom event interface
 let e = new EventInterface();
 
-// Fire a callback function every time an event fires
 e.on('custom-event', function(arg1, arg2){
-  
+  // Fire a callback function every time an event fires
 });
 
-// Wait to next fire event
-let p = await e.when('custom-event');
+let p = await e.when('custom-event'); // Wait to next fire event
 
-// Fire event
-e.launch('custom-event', arg1, arg2);
+e.launch('custom-event', arg1, arg2); // Fire a trigger event
 
-// Remove a callback
-e.removeCallback(callbackID);
+e.removeCallback(callbackID); // Remove a record callback
 
-// Apply event interface in a object
-EventInterface.implement(obj);
+/* Apply event interface in a object */
+EventInterface.implement(obj); 
+//obj.on();
+//obj.when();
+//obj.removeEvent();
 
 ```
 
