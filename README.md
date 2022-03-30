@@ -20,11 +20,12 @@ e.launch('custom-event', arg1, arg2); // Fire a trigger event
 
 e.removeCallback(callbackID); // Remove a record callback
 
-/* Apply event interface in a object */
-EventInterface.implement(obj); 
+// Apply event interface in a object
+let ei = EventInterface.implement(obj); 
 //obj.on();
 //obj.when();
-//obj.removeEvent();
+//obj.removeCallback();
+//ei.launch();
 
 ```
 
