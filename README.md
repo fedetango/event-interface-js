@@ -18,7 +18,7 @@ let r = await e.when('custom-event'); // Wait to next fire event
 
 e.launch('custom-event', arg1, arg2); // Fire a trigger event
 
-e.removeCallback(callbackID); // Remove a record callback
+e.removeListener(callbackID); // Remove a record callback
 
 ```
 
