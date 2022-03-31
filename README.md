@@ -24,9 +24,10 @@ e.removeCallback(callbackID); // Remove a record callback
 
 ## Apply interface in a object
 
+The "implement" static function provided by EventInterface class allows to make compatible any object with the event interface automatically. 
+
 ```Javascript
 
-// The "implement" static function of EventInterface class allows to make compatible any object with the event interface automatically. 
 // (return a EventInterface object instance)
 let ei = EventInterface.implement(obj);
 
