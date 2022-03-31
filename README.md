@@ -23,7 +23,6 @@ e.removeListener(callbackID); // Remove a record callback
 ```
 
 ## Apply interface in a object
-
 The "implement" static function provided by EventInterface class allows to make compatible any object with the event interface automatically. 
 
 ```Javascript
@@ -85,5 +84,21 @@ console.log('The tea is cold. Heat again');
 t.toWarn(50);
 await t.when('cold');
 console.log('The tea is cold. Finish');
+
+```
+
+## Event inheritance
+You will often need extended classes to access and execute events, which can create collisions.
+
+EventInterface takes this into account and addresses it with a number of functions.
+
+```Javascript
+ 
+```
+
+## Private Events
+Too is posible declarate and trigger private events.
+
+```Javascript
 
 ```
