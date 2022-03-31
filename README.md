@@ -50,7 +50,7 @@ import { EventInterface } from 'event-interface';
 // Implement in a class
 class Teapot() {
   
-  // We suggest saving event in a private property
+  // We suggest saving the EventInterface instance in a private property
   #events;
   constructor() {
     #events = EventInterface.implement(this);
