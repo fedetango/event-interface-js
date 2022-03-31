@@ -56,29 +56,22 @@ class Teapot() {
     #events = EventInterface.implement(this);
   }
   
+  // To warm the tea and then it cools.
   toWarm(temp=20) {
     setTimeout(function(){
-    
       this.#events.launch('ready', temp);
-      
-      // The kettle starts to get cold
       this.#cool();
-    
     }.bind(this), temp * 100);
-    
   }
   
   #cool(temp) {
-   
     setTimeout(function(){
       this.#events.launch('cold', temp);   
     }.bind(this), temp * 50)
-    
   }
   
 }
 
-// Configure calls
 let t = new Teapot();
 
 t.on('ready', function(temp){
@@ -86,10 +79,11 @@ t.on('ready', function(temp){
 });
 
 t.toWarn(30);
-
 await t.when('cold');
 console.log('The tea is cold. Heat again');
 
 t.toWarn(50);
+await t.when('cold');
+console.log('The tea is cold. Finish');
 
 ```
