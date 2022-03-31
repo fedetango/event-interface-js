@@ -4,7 +4,7 @@ A simple event interface for Javascript.  Applies events socket to your objects,
 The event-interface is a single script without third party libraries.
 Hopefully in the future ECMA implements it natively.
 
-## QuickUse
+## Quick use
 
 ```Javascript
 
@@ -20,7 +20,13 @@ e.launch('custom-event', arg1, arg2); // Fire a trigger event
 
 e.removeCallback(callbackID); // Remove a record callback
 
-// Apply event interface in a object
+```
+
+## Apply interface in a object
+
+```Javascript
+
+// (return a EventInterface object instance)
 let ei = EventInterface.implement(obj); 
 //obj.on();
 //obj.when();
@@ -29,7 +35,7 @@ let ei = EventInterface.implement(obj);
 
 ```
 
-## Example with a class
+## Apply Event Interface in a class
 
 ```Javascript
 import { EventInterface } from 'event-interface';
