@@ -60,7 +60,7 @@ class Teapot() {
   toWarm(temp=20) {
     setTimeout(function(){
       this.#events.launch('ready', temp);
-      this.#cool();
+      this.#cool(temp);
     }.bind(this), temp * 100);
   }
   
