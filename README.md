@@ -14,7 +14,7 @@ e.on('custom-event', function(arg1, arg2){
   // Fire a callback function every time an event fires
 });
 
-let p = await e.when('custom-event'); // Wait to next fire event
+let r = await e.when('custom-event'); // Wait to next fire event
 
 e.launch('custom-event', arg1, arg2); // Fire a trigger event
 
