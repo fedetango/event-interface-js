@@ -56,7 +56,7 @@ class Teapot() {
   // We suggest saving the EventInterface instance in a private property
   #events;
   constructor() {
-    #events = EventInterface.implement(this);
+    this.#events = EventInterface.implement(this);
   }
   
   // To warm the tea and then it cools.
