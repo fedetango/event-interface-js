@@ -18,8 +18,11 @@ e.on('custom-event', function(arg1, arg2){
 // Define sync event
 let r = await e.when('custom-event'); // Wait to next fire event
 
-// Fire event
+// Fire a event
 e.launch('custom-event', arg1, arg2); // Fire a trigger event
+
+// "Release" causes the next events to be fired automatically when they are your listener created. Useful for events that happen only once.
+e.release('custom-event', arg1, arg2); // Fire a trigger event and the all nexts
 
 // Remove listener
 e.removeListener(callbackID); // Remove a record callback
