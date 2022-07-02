@@ -10,14 +10,18 @@ Hopefully in the future ECMA implements it natively.
 
 let e = new EventInterface();
 
+// Define async event
 e.on('custom-event', function(arg1, arg2){
   // Fire a callback function every time an event fires
 });
 
+// Define sync event
 let r = await e.when('custom-event'); // Wait to next fire event
 
+// Fire event
 e.launch('custom-event', arg1, arg2); // Fire a trigger event
 
+// Remove listener
 e.removeListener(callbackID); // Remove a record callback
 
 ```
