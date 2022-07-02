@@ -50,6 +50,7 @@ let ei = EventInterface.implement(obj);
 ```
 
 ## Apply Event Interface in a class
+In custom classes, we recommend creating an event interface in the constructor.
 
 ```Javascript
 import { EventInterface } from 'event-interface';
