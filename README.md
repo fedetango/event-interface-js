@@ -42,6 +42,8 @@ let ei = EventInterface.implement(obj);
 // To execute launches use the created instance of EventInterface
 //ei.launch();
 
+// Note that the launch function is not inherited by the object. If you want to build a link for the user, you will need to create a reference manually.
+
 ```
 
 ## Apply Event Interface in a class
