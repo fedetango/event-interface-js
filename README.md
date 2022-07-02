@@ -21,8 +21,8 @@ let r = await e.when('custom-event'); // Wait to next fire event
 // Fire a event
 e.launch('custom-event', arg1, arg2); // Fire a trigger event
 
-// "Release" causes the next events to be fired automatically when they are your listener created. Useful for events that happen only once.
-e.release('custom-event', arg1, arg2); // Fire a trigger event and the all nexts
+// "Release" causes the next events to be fired automatically when new "listeners" are defined. Useful for events that happen only once.
+e.release('custom-event', arg1, arg2); // Fire a trigger event as "launch" and fire all next events.
 e.stopRelease(); // Stop execution of "release" and the next events will no longer fire automatically when new "listeners" are defined.
 
 // Remove listener
