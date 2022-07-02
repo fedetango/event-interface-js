@@ -23,6 +23,7 @@ e.launch('custom-event', arg1, arg2); // Fire a trigger event
 
 // "Release" causes the next events to be fired automatically when they are your listener created. Useful for events that happen only once.
 e.release('custom-event', arg1, arg2); // Fire a trigger event and the all nexts
+e.stopRelease(); // Stop execution of "release" and the next events will no longer fire automatically when new "listeners" are defined.
 
 // Remove listener
 e.removeListener(callbackID); // Remove a record callback
